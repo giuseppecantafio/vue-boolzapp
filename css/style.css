@@ -8,12 +8,12 @@
     --bg-bottom: #DBDBD2;
     --bg-app-header: #EAEAEA;
     --color-gray: #B1B1B1;
+    --bg-alert: #8EDAFC;
 }
 img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-
 }
 
 
@@ -41,18 +41,31 @@ img{
     left: 0;
     right: 0;
 }
-/* HEADER-LEFT */
+/* COL LEFT*/
 .col-4{
     background-color: var(--bg-app-header);
-    height: 100%;;
-}
-.header-left{
-    height: 60px;
-}
-.header-left .img-text-container{
-    
+    height: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 .header-left .font-container{
     color: var(--color-gray);
     font-size: 1.5rem;
+}
+.alert-section{
+    background-color: var(--bg-alert);
+}
+.alert-section .bell{
+    background-color: white;
+    color: var(--bg-alert);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+.alert-section .text-container{
+    font-size: 1rem;
 }

@@ -1,0 +1,16 @@
+/* GENERAL */
+.debug{
+    border: 1px solid black;
+}
+
+.bg-container{
+    height: 100vh;
+}
+.bg-top{
+    height: 20%;
+    background-color: #009688;
+}
+.bg-bottom{
+    height: 80%;
+    background-color: #DBDBD2;
+}

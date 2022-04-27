@@ -57,9 +57,9 @@
                             </section>
                             <div class="main-left">
                                 <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <img src="img/avatar_1.jpg" alt="Avatar">
-                                        <span>nome</span>
+                                    <li class="list-group-item d-flex justify-content-start align-items-center" v-for="(item, index) in contacts" :key="index">
+                                        <img src="'./img/avatar'+ item.avatar +'.jpg'" alt="'Avatar' + item.name">
+                                        <span>{{item.name}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -70,7 +70,7 @@
                             <div class="img-text-container d-flex">
                                 <img src="img/avatar_io.jpg" alt="mio avatar">
                                 <div>
-                                    <span>Sofia</span><br/>
+                                    <span>utente</span><br/>
                                     <span class="text-inform">Ultimo accesso</span>
                                 </div>
                             </div>
@@ -82,10 +82,10 @@
                         </div>
                         <div class="main-right">
                             <div class="messaggio sent">
-                                aaa
+                                aaaa
                             </div>
                             <div class="messaggio received">
-                                a
+                                n
                             </div>
                         </div>
                         <div class="footer-right d-flex justify-content-between align-items-center">

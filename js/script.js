@@ -164,7 +164,8 @@ const boolzapp = new Vue({
                     }
                 ],
             }
-        ]        
+        ],
+        currentIndex: 0,        
 
     },
 

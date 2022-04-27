@@ -133,3 +133,6 @@ img{
     float: left;
     clear: both;
 }
+.activeUser{
+    background-color: #e6e8e8;
+}

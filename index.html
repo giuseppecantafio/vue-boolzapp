@@ -52,13 +52,13 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text" id="inputGroup-sizing-sm"> <i class="fa-solid fa-magnifying-glass"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Cerca nelle chat">
+                                    <input type="text" class="form-control" placeholder="Cerca nelle chat" v-model="cerca">
                                   </div>
                             </section>
                             <div class="main-left">
                                 <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-start align-items-center" v-for="(item, index) in contacts" :key="index">
-                                        <img src="'./img/avatar'+ item.avatar +'.jpg'" alt="'Avatar' + item.name">
+                                    <li class="list-group-item d-flex justify-content-start align-items-center" v-for="(item, index) in contacts" :key="index" :class="{'activeUser': index === currentIndex}" @click="currentIndex = index">
+                                        <img :src="'./img/avatar'+ item.avatar +'.jpg'" :alt="'Avatar' + item.name">
                                         <span>{{item.name}}</span>
                                     </li>
                                 </ul>
@@ -81,16 +81,13 @@
                             </div>
                         </div>
                         <div class="main-right">
-                            <div class="messaggio sent">
-                                aaaa
-                            </div>
-                            <div class="messaggio received">
-                                n
+                            <div class="messaggio" v-for="(item, index) in contacts[currentIndex].messages" :key="index" :class="item.status === 'sent' ? 'sent' : 'received'">
+                                <span>{{item.message}}</span>
                             </div>
                         </div>
                         <div class="footer-right d-flex justify-content-between align-items-center">
                             <i class="fa-regular fa-face-smile px-4"></i>
-                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="messaggio">
                             <i class="fa-solid fa-microphone px-4"></i>
 
                         </div>

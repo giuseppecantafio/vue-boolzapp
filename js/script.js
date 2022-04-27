@@ -170,7 +170,7 @@ const boolzapp = new Vue({
     },
 
     methods: {
-
+        
     },
 
     mounted: {

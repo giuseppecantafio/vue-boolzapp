@@ -33,7 +33,6 @@ img{
 
 /* APP */
 .general-wrapper{
-    height: 90%;
     width: 80%;
     margin: 0 auto;
     position: absolute;
@@ -44,7 +43,6 @@ img{
 /* COL LEFT*/
 .col-4{
     background-color: var(--bg-app-header);
-    height: 100%;
     padding-left: 0!important;
     padding-right: 0!important;
 }
@@ -68,4 +66,41 @@ img{
 }
 .alert-section .text-container{
     font-size: 1rem;
+    padding-left: 5px;
+}
+.alert-section .text-1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+.alert-section .text-2 a {
+    color: grey;
+    font-size: 0.8rem;
+}
+.fa-magnifying-glass{
+    color: var(--color-gray);
+}
+.main-left{
+    height: calc(640px - 185px);
+    background-color: white;
+    overflow-y: scroll;
+}
+
+/* COL-8 */
+.col-8{
+    background-color: var(--bg-app-header);
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.header-right .font-container{
+    color: var(--color-gray);
+    font-size: 1.5rem;
+}
+.main-right{
+    background-image: url(../img/mine.jpg);
+    height: 500px;
+    overflow-y: scroll;
+}
+.footer-right{
+    height: 60px;
 }

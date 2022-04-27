@@ -165,12 +165,33 @@ const boolzapp = new Vue({
                 ],
             }
         ],
-        currentIndex: 0,        
+        currentIndex: 0,
+        cerca: '',
+        messaggio: '',
 
     },
 
     methods: {
-        
+        inviaMessaggio(){
+            const nuovoSent = {
+                date:  'data',
+                message: this.messaggio,
+                status: 'sent',
+            };
+
+            const nuovoReceived = {
+                date: 'data',
+                message: 'ok!',
+                status: 'received'
+            };
+
+            this.contacts[this.currentIndex].messages.push(nuovoSent);
+            this.messaggio = '';
+
+            const risposta = setTimeout(()=>{
+                this.contacts[this.currentIndex].messages.push(nuovoReceived)
+            }, 1000)
+        }
     },
 
     mounted: {

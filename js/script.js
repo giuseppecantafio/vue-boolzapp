@@ -174,13 +174,13 @@ const boolzapp = new Vue({
     methods: {
         inviaMessaggio(){
             const nuovoSent = {
-                date:  'data',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.messaggio,
                 status: 'sent',
             };
 
             const nuovoReceived = {
-                date: 'data',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: 'ok!',
                 status: 'received'
             };
@@ -192,9 +192,5 @@ const boolzapp = new Vue({
                 this.contacts[this.currentIndex].messages.push(nuovoReceived)
             }, 1000)
         }
-    },
-
-    mounted: {
-
     }
 })

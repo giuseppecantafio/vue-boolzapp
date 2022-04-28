@@ -198,7 +198,10 @@ const boolzapp = new Vue({
             const risposta = setTimeout(()=>{
                 this.contacts[this.currentIndex].messages.push(nuovoReceived)
             }, 1000)
-        }
+        },
+        cancellaMessaggio(i){
+            this.contacts[this.currentIndex].messages.splice(i,1);
+        },
     },
     computed: {
         filteredContacts(){

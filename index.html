@@ -70,9 +70,9 @@
                                     <img :src="'./img/avatar'+ item.avatar +'.jpg'" :alt="'Avatar' + item.name">
                                     <div class="px-2">
                                         <span>{{item.name}}</span><br />
-                                        <span class="text-last-message">Ultimo messaggio inviato</span>
+                                        <span class="text-last-message">{{item.messages.length > 0 ? item.messages.slice(-1)[0].message : ''}}</span>
                                     </div>
-                                    <p class="text-upper-date">data</p>
+                                    <p class="text-upper-date">{{item.messages.length > 0 ? item.messages.slice(-1)[0].date : ''}}</p>
                                 </li>
                             </ul>
                         </div>
@@ -85,7 +85,7 @@
                                     :alt="'Avatar' + contacts[currentIndex].name">
                                 <div>
                                     <span>{{contacts[currentIndex].name}}</span><br />
-                                    <span class="text-inform">Ultimo accesso: </span>
+                                    <span class="text-inform">Ultimo accesso: {{contacts[currentIndex].messages.length > 0 ? contacts[currentIndex].messages.slice(-1)[0].date : ''}} </span>
                                 </div>
                             </div>
                             <div class="font-container">

@@ -58,7 +58,7 @@
                             </section>
                             <div class="main-left">
                                 <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-start align-items-center" v-for="(item, index) in contacts" :key="index" :class="{'activeUser': index === currentIndex}" @click="currentIndex = index">
+                                    <li class="list-group-item d-flex justify-content-start align-items-center" v-for="(item, index) in filteredContacts" :key="item.id" :class="{'activeUser': index === currentIndex}" @click="viewChat(item.id)">
                                         <img :src="'./img/avatar'+ item.avatar +'.jpg'" :alt="'Avatar' + item.name">
                                         <div class="px-2">
                                             <span>{{item.name}}</span><br/>

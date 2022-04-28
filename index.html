@@ -98,11 +98,11 @@
                             <div class="messaggio" v-for="(item, index) in contacts[currentIndex].messages" :key="index"
                                 :class="item.status === 'sent' ? 'sent' : 'received'">
                                 <div>{{item.message}} 
-                                    <div class="arrow dropdown">
+                                    <div class="arrow dd">
                                         <i class="fa-solid fa-angle-down"></i>
                                         <div class="dropdown-content">
                                             <span @click="cancellaMessaggio(index)">Cancella messaggio</span>
-                                            </div>
+                                        </div>
                                     </div>
                                     <p class="text-date">{{item.date}}</p>
                                 </div>
